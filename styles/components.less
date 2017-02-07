@@ -1,0 +1,45 @@
+/**
+ * @file styles/components.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University Library
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Reusable components
+ */
+.article_details_tabs {
+	&:extend(.pkp_unstyled_list);
+	border-bottom: @bg-border;
+
+	&.item {
+		margin-bottom: @double;
+		padding-bottom: 0;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: inline-block;
+		position: relative;
+		top: 1px;
+		padding: 0.5em 1em;
+		border: 1px solid transparent;
+		border-bottom: none;
+		text-decoration: none;
+	}
+
+	.current {
+		background: @bg;
+		border-color: @bg-border-color;
+	}
+}
+
+.article_details_tab_content {
+	display: none;
+
+	&.is-visible {
+		display: block;
+	}
+}
